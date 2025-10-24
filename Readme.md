@@ -12,8 +12,8 @@ and saving the results into CSV files.
 ## 📁 Files
 | File | Description |
 |------|--------------|
-| `docker-compose.yaml` | Starts Kafka, Zookeeper, and Jupyter Spark containers using Docker. |
-| `traffic_producer.py` | Python script generating and sending live traffic data to Kafka. |
+| `docker-compose.yml` | Starts Kafka, Zookeeper, and Jupyter Spark containers using Docker. |
+| `work/realtime_traffic_producer.py` | Python script generating and sending live traffic data to Kafka (located inside the `work/` folder). |
 | `traffic_stream_analytics.py` | Spark Structured Streaming job reading from Kafka and performing analytics. |
 | `traffic_analytics/` | Folder where Spark stores real-time CSV analytics output. |
 | `analytics_checkpoints/` | Folder for Spark streaming checkpoints (state tracking). |
@@ -22,8 +22,8 @@ and saving the results into CSV files.
 
 ## ⚙️ How to Run
 
-1. Make sure **Docker Desktop** is running.
-2. Open a terminal inside your project folder.
+1. Make sure **Docker Desktop** is running.  
+2. Open a terminal inside your project folder.  
 3. Start all containers:
    ```bash
    docker compose up -d
