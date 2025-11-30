@@ -1,0 +1,21 @@
+{
+    "rules": [
+        {
+            "enabled": true,
+            "name": "move-old-to-cool",
+            "type": "Lifecycle",
+            "definition": {
+                "filters": {
+                    "blobTypes": [ "blockBlob" ],
+                    "prefixMatch": [ "traffic/raw/" ]
+                },
+                "actions": {
+                    "baseBlob": {
+                        "tierToCool": { "daysAfterModificationGreaterThan": 30 },
+                        "delete": { "daysAfterModificationGreaterThan": 365 }
+                    }
+                }
+            }
+        }
+    ]
+}
